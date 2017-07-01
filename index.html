@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="jquery/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+<style>
+footer{
+      background-color:#000000;
+      color: white;
+      padding: 10px;
+	  position:fixed;
+	  bottom:0;
+	  left:0;
+	  right:0;
+    }
+header{
+background-color:#000000;
+color:#ffffff;
+height:80px;
+}
+body {
+background-image:url("images/2.jpg");
+}
+* {
+box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+.login {
+margin: 60px auto;
+width: 300px;
+}
+.login-screen {
+background-color: #000;
+padding: 20px;
+border-radius: 5px;
+opacity:0.93;
+}
+.app-title {
+text-align: center;
+color: #fff;
+}
+
+.login-form {
+text-align: center;
+}
+.control-group {
+margin-bottom: 10px;
+}
+
+input {
+color:#000;
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border .5s;
+}
+
+input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+
+.btn {
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: #2980B9;
+}
+</style>
+<script>
+function validate()
+{
+var myform=document.form1;
+if(myform.userid.value=="")
+{ alert("Enter User ID");
+return false;
+}
+if(myform.password.value=="")
+{alert("Enter Password");
+return false;
+}
+return true;
+}
+</script>
+</head>
+  <body>
+<header class="container-fluid">
+	<img src="images/logo.png" height="70" style="display:inline-block; float:left;" >
+	<h1 align="center">Web Based Reporting Portal</h1>
+</header>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Login</h1>
+			</div>
+            <form action="login1.php" method="POST" name="form1" onsubmit="return validate()">
+			<div class="login-form">
+				<div class="control-group">
+				<input type="text" class="login-field" name="userid" placeholder="Enter UserID" id="login-name">
+				<label class="login-field-icon fui-user" for="login-name"></label>
+				</div>
+
+				<div class="control-group">
+				<input type="password" class="login-field" name="password" placeholder="Enter Password"id="login-pass">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+
+				<button type="submit" class="btn btn-primary btn-large btn-block">Login<span class="glyphicon glyphicon-off"></span></button>
+			</div>
+			</form>
+		</div>
+	</div>
+<footer class="container-fluid text-center">
+<p style=" font-size:100%;">All rights reserved copyright &#169; 2017 &nbsp; &nbsp; &nbsp; &nbsp;Designed By: Dhananjay Gambhir</p>
+</footer>
+</body>
+</html>
